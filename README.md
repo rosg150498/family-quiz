@@ -26,7 +26,7 @@
 
 ### Logo
 
-### Media Queries / Resposnive Design
+### Media Queries / Responsive Design
 
 ## Project Features
 
