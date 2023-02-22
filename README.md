@@ -66,6 +66,16 @@ The objective of this one-page game quiz website is to provide users with the op
 
 ### Requirements
 
+* Maintain a single page web quiz layout that is easy for users to grasp and interpret, which should be consistent, eye-catching, and efficient. 
+
+* Appropriate headings are used correctly to engage and inform the user 
+
+* The information is presented in a way that is straightforward and interesting to read. 
+
+* The website is constructed in such a way that it will keep the user's interest for the entirety of the family quiz sections. 
+
+* The single page website quiz is to be viewed on a variety of device screens
+
 ### Expectations
 
 ## Website Design Choices
