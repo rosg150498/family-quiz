@@ -76,6 +76,10 @@ The objective of this one-page game quiz website is to provide users with the op
 
 * The single page website quiz is to be viewed on a variety of device screens
 
+* The webpage is designed to be compatible with major web browsers including Chrome, Firefox, Safari and Edge
+
+* The webpage is designed to be accessible to all users, including those with disabilities or special needs
+
 ### Expectations
 
 ## Website Design Choices
