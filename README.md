@@ -52,6 +52,18 @@ The objective of this one-page game quiz website is to provide users with the op
 
 ### Site Owner Goals 
 
+* Advertise family quiz questions
+
+* Attracts users with families of all age groups
+
+* Implement site accessibility for users
+
+* Ensure the questions that are presented are easy to comprehend, clear, and that the responses that relate to them are appropriate. 
+
+* Ensure that users scores can be generated accurately with the selection of correct or incorrect answers and can be loaded into a leaderboard
+
+* Make sure the users quiz progress is monitored accurately 
+
 ### Requirements
 
 ### Expectations
