@@ -12,6 +12,22 @@ The objective of this one-page game quiz website is to provide users with the op
 
 ### User Goals
 
+1) Font, Colour and Icons/Images that are aesthetically pleasing to the eye
+
+2) Accessibility features that are added are easily identified including alt text
+
+3) Able to navigate between different sections of the quiz easily
+
+4) Quiz sections that are structured, user-friendly and welcoming
+
+5) Sections that feature white space for readability and to reduce unnecessary content 
+
+6) Able to locate and enter family name with ease in the provided input box
+
+7) Able to have quick and easy access to the leaderboard 
+
+8) Questions and their corresponding answers are correct and are not misleading
+
 ### User Stories
 
 ### Site Owner Goals 
