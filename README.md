@@ -82,6 +82,22 @@ The objective of this one-page game quiz website is to provide users with the op
 
 ### Expectations
 
+* I expect the quiz to load quickly and efficiently so I can maintain excitement
+
+* I expect a user-friendly interface with clear instructions 
+
+* I expect to navigate easily to relevant sections of the quiz with operating buttons
+
+* I expect to select an answer and submit to be processed as correct or incorrect 
+
+* I expect a progress bar and score to be provided to indicate my status in the game and score so I am aware how much I've scored so far
+
+* I expect the questions to be fun, interesting and quite challenging
+
+* I expect the quiz to be designed for different screen sizes and tested on various browsers
+
+* I expect to navigate to a leaderboard so I can track my high scores in one place
+
 ## Website Design Choices
 
 ### Colours
