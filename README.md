@@ -116,6 +116,28 @@ I have made the decision to choose Open Sans as my primary font since it is an u
 
 I aim to utilise a symbolic symbol portraying a happy family to make the website feel more friendly and cosy. Icons may help users maintain attention by providing a visual representation of information and balancing text and graphics. Additional symbols, such as those depicting questions, answers, and scores, will also be displayed in other portions of the single page website.
 
+### Wireframes 
+
+I have included wireframes of the sections that I intend to include in the family quiz application's single page design. Each wireframe is a proposed design of what I expect the overall look and feel to be, and each is a portion of the single page site.
+
+<hr>
+
+![Trivia Family Quiz Landing Welcoming Wireframe](https://user-images.githubusercontent.com/114010857/221445205-fe74265c-d3f3-40ad-9de5-52e644afd7ed.png)
+
+<hr>
+
+![Trivia Family Quiz Questions design proposal wireframe](https://user-images.githubusercontent.com/114010857/221445230-3f4f66b4-ba99-4168-8e07-8f2c056f1d0d.png)
+
+<hr>
+
+![Trivia Family Quiz Score Wireframe](https://user-images.githubusercontent.com/114010857/221445247-0fdb17b3-5801-4976-a00d-85abdff098b6.png)
+
+<hr>
+
+![Trivia Family Quiz Leaderboard](https://user-images.githubusercontent.com/114010857/221445269-8e4f91a2-5d9c-422e-bd22-4aee81a4091e.png)
+
+<hr>
+
 ### Logo
 
 ### Media Queries / Responsive Design
