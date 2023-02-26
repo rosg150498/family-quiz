@@ -102,9 +102,19 @@ The objective of this one-page game quiz website is to provide users with the op
 
 ### Colours
 
+I have come to the conclusion that the best way to attract the interest of the greatest number of people is to devise a family trivia game that people of all ages would enjoy participating in.
+This single page website will use a traditional blue as its background colour since blue is generally associated with sentiments of serenity, confidence, and unity. It also portrays a sense of quiet and tranquilly, which is why this website uses it. Because it is more aesthetically pleasing for users, I have chosen to make the primary backdrop a blue colour with the hex code #0F4C81, and I will use the colour #FFFFFF for the dominant body text colour.
+
+Given the good contrast that #E6E6E6 offers, the name field text area box will use this colour shade and questions for the family quiz will be comprised of this shade as well. I will pick #FFFFFFF as the colour for the answers to the quiz since it contrasts nicely with both #0B600B, which indicates that the user provided the proper answer, and #AD0401, which indicates that the user provided an incorrect response.
+
+
 ### Fonts
 
+I have made the decision to choose Open Sans as my primary font since it is an uncluttered, sophisticated, legible, and contemporary typeface that possesses intelligible features and is straightforward with dyslexia characteristics. This specific font contains features that are appropriate for use in a family setting and is easy to read when it comes to the content of online quizzes. The headings of the page will be set in Lato as it contrasts with Open Sans and is also a friendly sans-serif font that is very readable on different screen sizes 
+
 ### Icons
+
+I aim to utilise a symbolic symbol portraying a happy family to make the website feel more friendly and cosy. Icons may help users maintain attention by providing a visual representation of information and balancing text and graphics. Additional symbols, such as those depicting questions, answers, and scores, will also be displayed in other portions of the single page website.
 
 ### Logo
 
