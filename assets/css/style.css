@@ -19,6 +19,7 @@ body{
     position: absolute;
     margin-left: 9.5rem;
     margin-top: -4rem;
+    box-shadow: 0 6px 20px #ffffff; 
 }
 
 #quiz-landing{
