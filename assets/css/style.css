@@ -9,10 +9,32 @@ body{
     background-color: #0F4C81;
 }
 
+
+/* Quiz Landing Heading */
+
 #quiz-landing{
     font-family: 'Lato', sans-serif;
     font-size: 52px;
     color: #FFFFFF;
     margin-left: 22.8rem;
     margin-top: 19.2rem;
+}
+
+
+/* Quiz Game Section */
+
+#quiz-instruction{
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    color: #FFFFFF;
+    margin-left: 34.8rem;
+    margin-top: 12rem;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-left: 34.8rem;
+    margin-top: 2rem;
 }
