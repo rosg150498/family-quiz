@@ -12,3 +12,21 @@ function loadQuestion() {
         .then(data => showQuestion(data.results));
 }
 
+
+// Function that returns quiz questions and answers data
+
+function showQuestion(data) {
+    const something = data.map(item => {
+        return {
+            difficulty: item.difficulty,
+            question: item.question,
+            correctAnswer: item.correct_answer,
+            answers: [...item.incorrect_answers, item.correct_answer]
+        };
+    });
+    
+    questions.push(...something);
+    console.log(questions);
+}
+
+loadQuestion();
