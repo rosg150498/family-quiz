@@ -46,3 +46,19 @@
 }
 
     loadQuestion();
+
+
+   // Assign Letters to quiz answers 
+
+   const answerLetters = ['A', 'B', 'C', 'D'];
+   
+   for (let i = 0; i < question.answers.length; i++) {
+     const answerText = question.answers[i];
+     const answerElement = document.createElement('p');
+     answerElement.textContent = `${answerLetters[i]}) ${answerText}`;
+     
+     // Add a class to the answer element based on the corresponding letter
+     answerElement.classList.add(`answer-${answerLetters[i]}`);
+   
+     questionElement.appendChild(answerElement);
+   } 
