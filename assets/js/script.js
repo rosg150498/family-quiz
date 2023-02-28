@@ -28,8 +28,11 @@
 
     // Adding a horizontal rule to the <div>
    const hrElement = document.createElement('hr');
-   hrElement.style.width = `${question.question.length}ch`;
+   hrElement.style.width = '85%';
+   hrElement.style.marginTop = '1rem';
+   hrElement.style.marginBottom = '1rem';
    hrElement.style.marginLeft = '12rem';
+   hrElement.style.marginRight = '0';
    questionElement.appendChild(hrElement);
    
    // Adding the question to the quiz container
