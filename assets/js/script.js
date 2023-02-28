@@ -1,32 +1,43 @@
-// Family Quiz Game Section 
+    // Family Quiz Game Section 
 
-const questions = [];
+    const questions = [];
 
 
-// Function that loads quiz questions from API
+    // Function that adds quiz questions to the quiz container
+    function addQuestionsToQuiz(questions) {
 
-function loadQuestion() {
+    const quizElement = document.getElementById('family-quiz');
+
+    questions.forEach((question, index) => {
+    
+    // Adding a new <div> element for each question
+    const questionElement = document.createElement('div');
+    
+    questionElement.classList.add('question');
+
+    // Adding the question text to the <div> with style
+    const questionText = document.createElement('p');
+    questionText.textContent = `${index + 1}. ${question.question}`;
+    questionText.style.fontSize = '24px';
+    questionText.style.color = '#FFFFFF';
+    questionText.style.fontWeight = 'bold';
+    questionText.style.marginTop = '-22rem';
+    questionText.style.marginLeft = '20rem';
+    questionText.setAttribute('class', 'question-text');
+    questionElement.appendChild(questionText);
+    
+
+    // Adding the question to the quiz container
+    quizElement.appendChild(questionElement);
+  });
+}
+
+    // Function that loads quiz questions from API
+    function loadQuestion() {
     const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
     fetch(APIUrl)
-        .then(result => result.json())
-        .then(data => showQuestion(data.results));
+      .then(result => result.json())
+      .then(data => addQuestionsToQuiz(data.results));
 }
 
-
-// Function that returns quiz questions and answers data
-
-function showQuestion(data) {
-    const something = data.map(item => {
-        return {
-            difficulty: item.difficulty,
-            question: item.question,
-            correctAnswer: item.correct_answer,
-            answers: [...item.incorrect_answers, item.correct_answer]
-        };
-    });
-    
-    questions.push(...something);
-    console.log(questions);
-}
-
-loadQuestion();
+    loadQuestion();
