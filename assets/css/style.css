@@ -71,3 +71,15 @@ h2{
     margin-left: 12rem;
     margin-right: 0;
 }
+
+#quiz-main-menu{
+    background-color: #E6E6E6;
+    border-color: #FFFFFF;
+    color: #0F4C81;
+    padding: 1.2rem 1.2rem;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
