@@ -36,7 +36,8 @@ body{
 #quiz-instruction{
     font-family: 'Lato', sans-serif;
     font-size: 26px;
-    color: #E6E6E6;
+    font-weight: bold;
+    color: #FFFFFF;
     margin-left: 34.8rem;
     margin-top: 20rem;
 }
