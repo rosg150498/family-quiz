@@ -78,8 +78,9 @@ h2{
     color: #0F4C81;
     padding: 1.2rem 1.2rem;
     text-align: center;
-    display: block;
+    display: inline-block;
     font-size: 16px;
-    margin: 1rem 0.5rem;
+    margin: 3.2rem 0.5rem 0 34rem;
     cursor: pointer;
+    border-radius: 2rem;
 }
