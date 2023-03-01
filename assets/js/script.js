@@ -1,7 +1,8 @@
-    // Family Quiz Game Section 
+   const quizAnswerRef = Array.from(document.querySelectorAll('.quiz-answers'))
+
+   // Family Quiz Game Section 
 
     const questions = [];
-
 
     // Function that adds quiz questions to the quiz container
     function addQuestionsToQuiz(questions) {
@@ -12,7 +13,7 @@
     
     // Adding a new <div> element for each question
     const questionElement = document.createElement('div');
-    
+    generateAnswers(question.incorrect_answers)
     questionElement.classList.add('question');
 
     // Adding the question text to the <div> with style
@@ -54,7 +55,14 @@
    // Assign Letters to quiz answers 
 
    const answerLetters = ['A', 'B', 'C', 'D'];
+
    
+   function generateAnswers(listofAnswers){
+   console.log(listofAnswers)
+   quizAnswerRef.forEach((link , i ) => {
+       link.innerHTML = listofAnswers[i]
+   })
+   }
    for (let i = 0; i < question.answers.length; i++) {
      const answerText = question.answers[i];
      const answerElement = document.createElement('p');
@@ -65,3 +73,5 @@
    
      questionElement.appendChild(answerElement);
    } 
+
+  
