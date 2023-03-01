@@ -54,3 +54,19 @@ h2{
     font-size: 650px;
     color: #FFFFFF;
 }
+
+.question-text{
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-top: -26rem;
+    margin-left: 12rem;
+}
+
+.question-hr{
+    width: 85%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 12rem;
+    margin-right: 0;
+}
