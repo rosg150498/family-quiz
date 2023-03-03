@@ -30,6 +30,20 @@ body{
     margin-top: 8rem;
 }
 
+label{
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    font-size: 35px;
+    display: inline-block;
+    margin-left: 34rem;
+    margin-top: 20rem;
+}
+
+#name{
+   height: 1.6rem;
+   width: 14.2rem;
+   margin-left: 0.6rem;
+}
 
 /* Quiz Game Section */
 
