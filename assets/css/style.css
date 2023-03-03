@@ -36,7 +36,7 @@ label{
     font-size: 35px;
     display: inline-block;
     margin-left: 34rem;
-    margin-top: 20rem;
+    margin-top: 15rem;
 }
 
 #name{
@@ -54,7 +54,7 @@ label{
     display: inline-block;
     position: absolute;
     font-size: 16px;
-    margin-top: 30rem;
+    margin-top: 28rem;
     margin-left: -18rem;
     cursor: pointer;
     border-radius: 2rem;
