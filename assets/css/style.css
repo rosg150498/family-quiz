@@ -45,6 +45,21 @@ label{
    margin-left: 0.6rem;
 }
 
+#quiz-play-game{
+    background-color: #E6E6E6;
+    border-color: #FFFFFF;
+    color: #0F4C81;
+    padding: 1.2rem 1.2rem;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    font-size: 16px;
+    margin-top: 30rem;
+    margin-left: -18rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
 /* Quiz Game Section */
 
 #family-quiz{
