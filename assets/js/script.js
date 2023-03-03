@@ -39,6 +39,11 @@
     fetch(APIUrl)
       .then(result => result.json())
       .then(data => addQuestionsToQuiz(data.results));
+      return {
+        question: entry.question,
+        correct_answer: entry.correct_answer,
+        answers: [...entry.incorrect_answers, entry.correct_answer]
+      }
 }
 
     loadQuestion();
