@@ -31,10 +31,10 @@ body{
     text-shadow: 0.4rem 0.4rem #000;
 }
 
-label{
+#enter-name{
     font-family: 'Open Sans', sans-serif;
     color: #FFFFFF;
-    font-size: 35px;
+    font-size: 28px;
     display: inline-block;
     margin-left: 34rem;
     margin-top: 15rem;
