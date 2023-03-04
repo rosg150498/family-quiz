@@ -1,3 +1,4 @@
+  
    const quizAnswerRef = Array.from(document.querySelectorAll('.quiz-answers'))
 
    // Family Quiz Game Section 

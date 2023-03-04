@@ -58,6 +58,7 @@ label{
    margin-left: -17rem;
    cursor: pointer;
    border-radius: 2rem;
+   width: 100px;
 }
 
 #quiz-play-game{
