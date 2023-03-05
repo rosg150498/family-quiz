@@ -1,4 +1,18 @@
-  
+   function storeName() {
+
+      const name = document.getElementById('name').value
+
+      const nameElement = document.createElement('p');
+
+      nameElement.textContent = `Name: ${name}`;
+
+      document.getElementById('family-quiz').appendChild(nameElement);
+
+   }
+
+   document.getElementById('submit-name').addEventListener('click', storeName);
+   
+   
    const quizAnswerRef = Array.from(document.querySelectorAll('.quiz-answers'))
 
    // Family Quiz Game Section 
@@ -44,8 +58,11 @@
         question: entry.question,
         correct_answer: entry.correct_answer,
         answers: [...entry.incorrect_answers, entry.correct_answer]
-      }
-}
+      };
+      addQuestionsToQuiz([questionData]);
+      generateAnswers(data.results[0].incorrect_answers);
+    };
+
 
     loadQuestion();
 
