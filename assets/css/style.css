@@ -98,6 +98,10 @@ body{
     box-shadow: 0 6px 20px #FFFFFF;
 }
 
+.quiz-game-icon:hover{
+    box-shadow: 0 10px 20px #FFFF00;
+}
+
 .trivia-family-quiz{
     font-family: 'Lato', sans-serif;
     font-size: 54px;
