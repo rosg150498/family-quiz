@@ -104,6 +104,7 @@ body{
     margin-left: 22rem;
     text-transform: uppercase;
     line-height: 7rem;
+    text-shadow: 0.4rem 0.4rem #000;
 }
 
 #quiz-instruction{
