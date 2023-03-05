@@ -1,16 +1,23 @@
-   function storeName() {
+   
+   // Defining a variable to store the player's name
+ let playerName;
 
-      const name = document.getElementById('name').value
+ // Storing the player's name when they submit the name field
+ function storeName() {
+  playerName = document.getElementById('name').value;
 
-      const nameElement = document.createElement('p');
+  // Creating a <p> element to display the name
+  const nameElement = document.createElement('p');
 
-      nameElement.textContent = `Name: ${name}`;
+  nameElement.textContent = `Name: ${playerName}`;
 
-      document.getElementById('family-quiz').appendChild(nameElement);
+  // Appending the name element to the container above the quiz questions
+  const quizContainer = document.getElementById('quiz-container');
+  quizContainer.insertBefore(nameElement, quizContainer.firstChild);
+}
 
-   }
-
-   document.getElementById('submit-name').addEventListener('click', storeName);
+// Adding a click event listener to the submit button
+document.getElementById('submit-name').addEventListener('click', storeName);
    
    
    const quizAnswerRef = Array.from(document.querySelectorAll('.quiz-answers'))
@@ -59,7 +66,7 @@
         correct_answer: entry.correct_answer,
         answers: [...entry.incorrect_answers, entry.correct_answer]
       };
-      addQuestionsToQuiz([questionData]);
+      addQuestionsToQuiz([questionData]); 
       generateAnswers(data.results[0].incorrect_answers);
     };
 

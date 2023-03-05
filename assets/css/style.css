@@ -79,6 +79,10 @@ body{
 
 /* Quiz Game Section */
 
+#quiz-container{
+    color: #FFFFFF;
+}
+
 #family-quiz{
     margin-top: 40rem;
     margin-bottom: 20rem;
