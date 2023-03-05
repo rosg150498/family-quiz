@@ -1,10 +1,37 @@
+   function validateName (name) {
+      const nameRegex = /^[a-zA-Z\s'-]+$/;
+      return nameRegex.test(name);
+   }
+   
    
    // Defining a variable to store the player's name
  let playerName;
 
  // Storing the player's name when they submit the name field
  function storeName() {
-  playerName = document.getElementById('name').value;
+
+    const nameInput = document.getElementById('name');
+
+    const name = nameInput.value.trim();
+
+    if(name.length === 0) {
+
+      const errorElement = document.createElement('p');
+
+      errorElement.textContent = 'Please enter your name';
+
+      errorElement.classList.add('error-message');
+
+      const quizContainer = document.getElementById('quiz-container');
+
+      quizContainer.insertBefore(errorElement, quizContainer.firstChild);
+
+      return;
+
+  }
+
+  playerName = name;
+
 
   // Creating a <p> element to display the name
   const nameElement = document.createElement('p');
@@ -17,7 +44,7 @@
 }
 
 // Adding a click event listener to the submit button
-document.getElementById('submit-name').addEventListener('click', storeName);
+ document.getElementById('submit-name').addEventListener('click', storeName);
    
    
    const quizAnswerRef = Array.from(document.querySelectorAll('.quiz-answers'))
