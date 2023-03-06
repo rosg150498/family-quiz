@@ -20,7 +20,7 @@
 
       const errorElement = document.createElement('p');
 
-      errorElement.textContent = 'Please enter your name...';
+      errorElement.textContent = 'Please enter your name';
 
       errorElement.classList.add('error-message');
 
@@ -36,13 +36,17 @@
 
 
   // Creating a <p> element to display the name
-  const nameElement = document.createElement('p');
 
-  nameElement.textContent = `Name: ${playerName}`;
+  const nameDisplayElement = document.createElement('p');
+
+  nameDisplayElement.textContent = `Name: ${playerName}`;
+
 
   // Appending the name element to the container above the quiz questions
+
   const quizContainer = document.getElementById('quiz-container');
-  quizContainer.insertBefore(nameElement, quizContainer.firstChild);
+  
+  quizContainer.insertBefore(nameDisplayElement, quizContainer.children[1]);
 }
 
 // Adding a click event listener to the submit button
