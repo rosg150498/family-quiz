@@ -20,7 +20,7 @@
 
       const errorElement = document.createElement('p');
 
-      errorElement.textContent = 'Please enter your name';
+      errorElement.textContent = 'Please enter your name...';
 
       errorElement.classList.add('error-message');
 
