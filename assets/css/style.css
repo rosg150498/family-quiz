@@ -71,8 +71,8 @@ body{
     display: inline-block;
     position: absolute;
     font-size: 16px;
-    margin-top: 34rem;
-    margin-left: -18rem;
+    margin-top: 18rem;
+    margin-left: 45rem;
     cursor: pointer;
     border-radius: 2rem;
 }
