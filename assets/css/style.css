@@ -119,6 +119,16 @@ body{
     text-shadow: 0.4rem 0.4rem #000;
 }
 
+.family-name{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    background-color: #E6E6E6;
+    color: #0B600B;
+    margin-top: 10rem;
+    margin-left: 0.5rem;
+    padding: 1.5rem 1.5rem;
+}
+
 #quiz-instruction{
     font-family: 'Lato', sans-serif;
     font-size: 26px;

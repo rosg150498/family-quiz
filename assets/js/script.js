@@ -39,14 +39,16 @@
 
   const nameDisplayElement = document.createElement('p');
 
-  nameDisplayElement.textContent = `Name: ${playerName}`;
+  nameDisplayElement.textContent = `Family Name: ${playerName}`;
+
+  nameDisplayElement.classList.add('family-name');
 
 
   // Appending the name element to the container above the quiz questions
 
-  const quizContainer = document.getElementById('quiz-container');
-  
-  quizContainer.insertBefore(nameDisplayElement, quizContainer.children[1]);
+  const familyQuiz = document.getElementById('family-name');
+
+  familyQuiz.insertBefore(nameDisplayElement, familyQuiz.children[1]);
 }
 
 // Adding a click event listener to the submit button
