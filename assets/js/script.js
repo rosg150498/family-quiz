@@ -10,6 +10,8 @@
  // Storing the player's name when they submit the name field
  function storeName() {
 
+    document.getElementById('submit-name').removeEventListener('click', storeName);
+
     const nameInput = document.getElementById('name');
 
     const name = nameInput.value.trim();
