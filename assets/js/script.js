@@ -139,12 +139,11 @@
     function loadQuestion() {
     const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
     fetch(APIUrl)
-      .then(result => result.json())
-      .then(data => addQuestionsToQuiz(data.results));
-      return {
-      addQuestionsToQuiz([questionData]); 
-      generateAnswers(data.results[0].incorrect_answers);
-    };
+    .then(result => result.json())
+    .then(data => {
+      addQuestionsToQuiz(data.results);
+      displayQuestion();
+    })
 
 
     loadQuestion();
