@@ -49,6 +49,7 @@
   const familyQuiz = document.getElementById('family-name');
 
   familyQuiz.insertBefore(nameDisplayElement, familyQuiz.children[1]);
+  document.getElementById('submit-name').removeEventListener('click', storeName);
 }
 
 // Adding a click event listener to the submit button
@@ -59,7 +60,9 @@
 
    // Family Quiz Game Section 
 
-    const questions = [];
+    let questions = [];
+    let currentQuestionIndex = 0;
+    let score = 0;
 
     // Function that adds quiz questions to the quiz container
     function addQuestionsToQuiz(questions) {
