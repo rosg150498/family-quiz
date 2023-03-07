@@ -74,17 +74,12 @@
       });
     }
 
-    // Function that adds quiz questions to the quiz container
-    function addQuestionsToQuiz(questions) {
 
-    const quizElement = document.getElementById('family-quiz');
+    function displayQuestion() {
+      const currentQuestion = questions[currentQuestionIndex];
+      const questionElement = document.getElementById('question');
+      questionElement.textContent = currentQuestion.question;
 
-    questions.forEach((question, index) => {
-    
-    // Adding a new <div> element for each question
-    const questionElement = document.createElement('div');
-    generateAnswers(question.incorrect_answers)
-    questionElement.classList.add('question');
 
     // Adding the question text to the <div> with style
     const questionText = document.createElement('p');
