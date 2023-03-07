@@ -146,7 +146,15 @@
     })
 
 
-    loadQuestion();
+    
+    .catch(error => console.error(error));
+}
+
+// Starting the quiz
+loadQuestion();
+
+
+   
 
 
    // Assign Letters to quiz answers 
@@ -170,5 +178,6 @@
    
      questionElement.appendChild(answerElement);
    } 
+
 
   
