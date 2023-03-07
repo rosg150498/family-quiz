@@ -93,6 +93,24 @@
       });
     }
 
+    function checkAnswer() {
+      const currentQuestion = questions[currentQuestionIndex];
+      const selectedAnswerElement = document.querySelector('.answer.selected');
+      if (!selectedAnswerElement) {
+        return;
+      }
+      const selectedAnswer = selectedAnswerElement.textContent.substring(3);
+      if (selectedAnswer === currentQuestion.correctAnswer) {
+        score++;
+      }
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+      } else {
+        endQuiz();
+      }
+    }
+
     // Adding the question text to the <div> with style
     const questionText = document.createElement('p');
     questionText.textContent = `Question ${index + 1} ) ${question.question}`;
