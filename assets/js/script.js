@@ -80,6 +80,18 @@
       const questionElement = document.getElementById('question');
       questionElement.textContent = currentQuestion.question;
 
+      const answerElements = document.querySelectorAll('.quiz-answers');
+      answerElements.forEach((element, i) => {
+        element.innerHTML = `${answerLetters[i]}) ${currentQuestion.answers[i]}`;
+        element.classList.remove('selected');
+        element.addEventListener('click', () => {
+          answerElements.forEach(element => {
+            element.classList.remove('selected');
+          });
+          element.classList.add('selected');
+        });
+      });
+    }
 
     // Adding the question text to the <div> with style
     const questionText = document.createElement('p');
