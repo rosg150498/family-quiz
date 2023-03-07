@@ -132,8 +132,7 @@
    
    // Adding the question to the quiz container
     quizElement.appendChild(questionElement);
-  });
-}
+
 
     // Function that loads quiz questions from API
     function loadQuestion() {
