@@ -168,6 +168,21 @@ h2{
     margin-right: 0;
 }
 
+#submit-answer{
+    background-color: #E6E6E6;
+    border-color: #FFFFFF;
+    color: #0F4C81;
+    padding: 1.2rem 1.2rem;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    font-size: 16px;
+    margin-top: 2.5rem;
+    margin-left: 34rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
 #quiz-main-menu{
     background-color: #E6E6E6;
     border-color: #FFFFFF;
@@ -176,7 +191,7 @@ h2{
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    margin: 3.2rem 0.5rem 0 34rem;
+    margin: 8.8rem 0.5rem 0 34rem;
     cursor: pointer;
     border-radius: 2rem;
 }

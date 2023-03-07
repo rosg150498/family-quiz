@@ -1,176 +1,94 @@
-   function validateName (name) {
-      const nameRegex = /^[a-zA-Z\s'-]+$/;
-      return nameRegex.test(name);
-   }
-   
-   
-   // Defining a variable to store the player's name
- let playerName;
+const submitButton = document.getElementById('submit-answer');
 
- // Storing the player's name when they submit the name field
- function storeName() {
+function validateName(name) {
+  const nameRegex = /^[a-zA-Z\s'-]+$/;
+  return nameRegex.test(name);
+}
 
-    document.getElementById('submit-name').removeEventListener('click', storeName);
+// Defining a variable to store the player's name
+let playerName;
 
-    const nameInput = document.getElementById('name');
+// Storing the player's name when they submit the name field
+function storeName() {
+  const nameInput = document.getElementById('name');
+  const name = nameInput.value.trim();
 
-    const name = nameInput.value.trim();
+  if (name.length === 0) {
+    const errorElement = document.createElement('p');
+    errorElement.textContent = 'Please enter your name';
+    errorElement.classList.add('error-message');
 
-    if(name.length === 0) {
+    const quizContainer = document.getElementById('quiz-container');
+    quizContainer.insertBefore(errorElement, quizContainer.firstChild);
 
-      const errorElement = document.createElement('p');
-
-      errorElement.textContent = 'Please enter your name';
-
-      errorElement.classList.add('error-message');
-
-      const quizContainer = document.getElementById('quiz-container');
-
-      quizContainer.insertBefore(errorElement, quizContainer.firstChild);
-
-      return;
-
+    return;
   }
 
   playerName = name;
 
-
   // Creating a <p> element to display the name
-
   const nameDisplayElement = document.createElement('p');
-
   nameDisplayElement.textContent = `Family Name: ${playerName}`;
-
   nameDisplayElement.classList.add('family-name');
 
-
   // Appending the name element to the container above the quiz questions
-
   const familyQuiz = document.getElementById('family-name');
-
   familyQuiz.insertBefore(nameDisplayElement, familyQuiz.children[1]);
+
   document.getElementById('submit-name').removeEventListener('click', storeName);
 }
 
 // Adding a click event listener to the submit button
- document.getElementById('submit-name').addEventListener('click', storeName);
-   
-   
-   const quizAnswerRef = Array.from(document.querySelectorAll('.quiz-answers'))
+document.getElementById('submit-name').addEventListener('click', storeName);
 
-   // Family Quiz Game Section 
+const quizAnswerRef = Array.from(document.querySelectorAll('.answer'));
 
-    let questions = [];
-    let currentQuestionIndex = 0;
-    let score = 0;
+// Family Quiz Game Section
 
-    function addQuestionsToQuiz(results) {
-      questions = results.map(result => {
-        return {
-          question: result.question,
-          correctAnswer: result.correct_answer,
-          answers: [...result.incorrect_answers, result.correct_answer].sort(() => Math.random() - 0.5)
-        };
-      });
-    }
+let questions = [];
+let currentQuestionIndex = 0;
+let score = 0;
 
-
-    function displayQuestion() {
-      const currentQuestion = questions[currentQuestionIndex];
-      const questionElement = document.getElementById('question');
-      questionElement.textContent = currentQuestion.question;
-
-      const answerElements = document.querySelectorAll('.quiz-answers');
-      answerElements.forEach((element, i) => {
-        element.innerHTML = `${answerLetters[i]}) ${currentQuestion.answers[i]}`;
-        element.classList.remove('selected');
-        element.addEventListener('click', () => {
-          answerElements.forEach(element => {
-            element.classList.remove('selected');
-          });
-          element.classList.add('selected');
-        });
-      });
-    }
-
-    function checkAnswer() {
-      const currentQuestion = questions[currentQuestionIndex];
-      const selectedAnswerElement = document.querySelector('.answer.selected');
-      if (!selectedAnswerElement) {
-        return;
-      }
-      const selectedAnswer = selectedAnswerElement.textContent.substring(3);
-      if (selectedAnswer === currentQuestion.correctAnswer) {
-        score++;
-      }
-      currentQuestionIndex++;
-      if (currentQuestionIndex < questions.length) {
-        displayQuestion();
-      } else {
-        endQuiz();
-      }
-    }
-
-
-    function endQuiz() {
-      const quizElement = document.getElementById('quiz');
-      quizElement.innerHTML = `<h2>Your score: ${score}/${questions.length}</h2>`;
-    }
-    
-
-    // Adding the question text to the <div> with style
-    const questionText = document.createElement('p');
-    questionText.textContent = `Question ${index + 1} ) ${question.question}`;
-    questionText.classList.add('question-text');
-    questionText.setAttribute('class', 'question-text');
-    questionElement.appendChild(questionText);
-
-    // Adding a horizontal rule to the <div>
-   const hrElement = document.createElement('hr');
-   hrElement.classList.add('question-hr')
-   questionElement.appendChild(hrElement);
-   
-   // Adding the question to the quiz container
-    quizElement.appendChild(questionElement);
-
-
-    // Function that loads quiz questions from API
-    function loadQuestion() {
-    const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
-    fetch(APIUrl)
+function loadQuestion() {
+  const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
+  fetch(APIUrl)
     .then(result => result.json())
     .then(data => {
       addQuestionsToQuiz(data.results);
       displayQuestion();
     })
-
-
-    
     .catch(error => console.error(error));
 }
+
+
+// Adding a click event listener to the submit button
+submitButton.addEventListener('click', checkAnswer);
 
 // Starting the quiz
 loadQuestion();
 
 
-   
+function displayQuestion() {
+  const currentQuestion = questions[currentQuestionIndex];
+  const questionElement = document.getElementById('question');
+  questionElement.textContent = currentQuestion.question;
 
+  const answerElements = document.querySelectorAll('.answer');
+  answerElements.forEach((element, i) => {
+    element.innerHTML = `${answerLetters[i]}) ${currentQuestion.answers[i]}`;
+    element.classList.remove('selected');
+    element.addEventListener('click', () => {
+      answerElements.forEach(element => {
+        element.classList.remove('selected');
+      });
+      element.classList.add('selected');
+    });
+  });
 
-   // Assign Letters to quiz answers 
-
-   const answerLetters = ['A', 'B', 'C', 'D'];
-
-   
-   function generateAnswers(listofAnswers){
-   console.log(listofAnswers)
-   quizAnswerRef.forEach((link , i ) => {
-       link.innerHTML = listofAnswers[i]
-   })
-   }
-   for (let i = 0; i < question.answers.length; i++) {
-     const answerText = question.answers[i];
-     const answerElement = document.createElement('p');
-     answerElement.textContent = `${answerLetters[i]}) ${answerText}`;
+  for (let i = 0; i < currentQuestion.answers.length; i++) {
+    const answerText = currentQuestion.answers[i];
+    const answerElement = document.createElement('p');
+    answerElement.textContent = `${answerLetters[i]}) ${answerText}`;
      
      // Add a class to the answer element based on the corresponding letter
      answerElement.classList.add(`answer-${answerLetters[i]}`);
@@ -179,4 +97,12 @@ loadQuestion();
    } 
 
 
-  
+  // Add a class to the answer element based on the corresponding letter
+  const answerLetter = answerLetters[i];
+  answerElement.classList.add(`answer-${answerLetter}`);
+
+
+   // Add the answer element to the quiz container
+   const answerContainer = document.getElementById('answers');
+   answerContainer.appendChild(answerElement);
+ }

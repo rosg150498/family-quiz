@@ -30,7 +30,7 @@
     <input type="text" id="name" placeholder="Please enter your name" pattern="^[a-zA-Z\s'-]+$" required>
     <p id="error-message" style="display: none; color: #AD0401;">Please enter a valid name...</p>
     
-    <button id="submit-name" onclick="validateForm(event)">Submit</button>
+    <button id="submit-name" onclick="validateForm(loadQuestion)">Submit</button>
 
     </form>
 
@@ -46,11 +46,14 @@
     <img class="quiz-game-icon" src="assets/images/quiz-game-icon.png" alt="Family Quiz Game Icon">
     <h2 class="trivia-family-quiz">Trivia Family Quiz</h2>
     <div id="family-name"></div>
+    <div id="question"></div>
     <h3 id="quiz-instruction">Select an answer to the question:</h3>
     <p class="quiz-answers">A)</p>
     <p class="quiz-answers">B)</p> 
     <p class="quiz-answers">C)</p>
     <p class="quiz-answers">D)</p>
+
+    <button id="submit-answer">Submit Answer</button>
 
     <a href="#main-menu"><button id="quiz-main-menu">Main Menu</button></a>
     </div>
