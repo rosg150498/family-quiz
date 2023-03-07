@@ -111,6 +111,13 @@
       }
     }
 
+
+    function endQuiz() {
+      const quizElement = document.getElementById('quiz');
+      quizElement.innerHTML = `<h2>Your score: ${score}/${questions.length}</h2>`;
+    }
+    
+
     // Adding the question text to the <div> with style
     const questionText = document.createElement('p');
     questionText.textContent = `Question ${index + 1} ) ${question.question}`;
