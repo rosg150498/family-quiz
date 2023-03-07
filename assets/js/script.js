@@ -64,6 +64,16 @@
     let currentQuestionIndex = 0;
     let score = 0;
 
+    function addQuestionsToQuiz(results) {
+      questions = results.map(result => {
+        return {
+          question: result.question,
+          correctAnswer: result.correct_answer,
+          answers: [...result.incorrect_answers, result.correct_answer].sort(() => Math.random() - 0.5)
+        };
+      });
+    }
+
     // Function that adds quiz questions to the quiz container
     function addQuestionsToQuiz(questions) {
 
@@ -100,10 +110,6 @@
       .then(result => result.json())
       .then(data => addQuestionsToQuiz(data.results));
       return {
-        question: entry.question,
-        correct_answer: entry.correct_answer,
-        answers: [...entry.incorrect_answers, entry.correct_answer]
-      };
       addQuestionsToQuiz([questionData]); 
       generateAnswers(data.results[0].incorrect_answers);
     };
