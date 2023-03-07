@@ -49,25 +49,27 @@ let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
+  // Function that loads quiz questions from API
 function loadQuestion() {
   const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
   fetch(APIUrl)
     .then(result => result.json())
-    .then(data => {
-      addQuestionsToQuiz(data.results);
-      displayQuestion();
-    })
-    .catch(error => console.error(error));
+    .then(data => addQuestionsToQuiz(data.results));
 }
 
+// Function that adds quiz questions to the questions array
+function addQuestionsToQuiz(questionsData) {
+  questionsData.forEach(entry => {
+    const question = {
+      question: entry.question,
+      correct_answer: entry.correct_answer,
+      answers: [...entry.incorrect_answers, entry.correct_answer]
+    };
+    questions.push(question);
+  });
+}
 
-// Adding a click event listener to the submit button
-submitButton.addEventListener('click', checkAnswer);
-
-// Starting the quiz
-loadQuestion();
-
-
+// Displaying the current question
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
   const questionElement = document.getElementById('question');
@@ -84,25 +86,45 @@ function displayQuestion() {
       element.classList.add('selected');
     });
   });
-
-  for (let i = 0; i < currentQuestion.answers.length; i++) {
-    const answerText = currentQuestion.answers[i];
-    const answerElement = document.createElement('p');
-    answerElement.textContent = `${answerLetters[i]}) ${answerText}`;
-     
-     // Add a class to the answer element based on the corresponding letter
-     answerElement.classList.add(`answer-${answerLetters[i]}`);
-   
-     questionElement.appendChild(answerElement);
-   } 
+}
 
 
-  // Add a class to the answer element based on the corresponding letter
-  const answerLetter = answerLetters[i];
-  answerElement.classList.add(`answer-${answerLetter}`);
+
+function addQuestionsToQuiz(questionsData) {
+  questionsData.forEach(entry => {
+    const question = {
+      question: entry.question,
+      correct_answer: entry.correct_answer,
+      answers: [...entry.incorrect_answers, entry.correct_answer]
+    };
+    questions.push(question);
+  });
+
+  displayQuestion();
+}
+
+function loadQuestion() {
+  const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
+  fetch(APIUrl)
+    .then(result => result.json())
+    .then(data => addQuestionsToQuiz(data.results));
+}
+
+  
+// Assign Letters to quiz answers
+const answerLetters = ['A', 'B', 'C', 'D'];
+
+function generateAnswers(listofAnswers) {
+  quizAnswerRef.forEach((link, i) => {
+    const answerLetter = answerLetters[i];
+    const answerElement = link;
+    answerElement.innerHTML = `${answerLetter}) ${listofAnswers[i]}`;
+    answerElement.classList.remove('selected');
+  });
+}
 
 
-   // Add the answer element to the quiz container
-   const answerContainer = document.getElementById('answers');
-   answerContainer.appendChild(answerElement);
- }
+// Starting the quiz
+loadQuestion();
+
+
