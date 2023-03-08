@@ -107,8 +107,13 @@ function displayQuestion() {
       answerItem.appendChild(answerInput);
       answerItem.appendChild(answerLabel);
 
+  
+  // Appending the list item to the answer list
+      answerList.appendChild(answerItem);
+    });    
 
-    });
+
+    };
 
 
 
