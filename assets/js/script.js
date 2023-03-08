@@ -103,6 +103,11 @@ function displayQuestion() {
     answerLabel.textContent = `${answerLetters[index]}) ${answer}`;
 
 
+  // Appending the input and label elements to the list item
+      answerItem.appendChild(answerInput);
+      answerItem.appendChild(answerLabel);
+
+
     });
 
 
