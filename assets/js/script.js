@@ -98,6 +98,11 @@ function displayQuestion() {
     answerInput.id = `answer-${index}`;
     answerLabel.setAttribute('for', `answer-${index}`);
 
+
+  // Adding the answer option text to the label element
+    answerLabel.textContent = `${answerLetters[index]}) ${answer}`;
+
+
     });
 
 
