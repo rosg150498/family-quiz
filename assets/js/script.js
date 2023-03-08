@@ -83,8 +83,12 @@ function displayQuestion() {
 
   // Create an unordered list element to hold the answer options
   const answerList = document.createElement('ul');
+ 
+  // Loop through each answer option and create a list item element for it
+    currentQuestion.answers.forEach((answer, index) => {
+    const answerItem = document.createElement('li');
 
-}
+    });
 
 
 
@@ -123,6 +127,4 @@ function generateAnswers(listofAnswers) {
 
 
 // Starting the quiz
-loadQuestion();
-
-
+loadQuestion(); 
