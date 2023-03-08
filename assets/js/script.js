@@ -14,8 +14,8 @@ function validateName(name) {
 let playerName;
 
 
-// Storing the player's name when they submit the name field
-function storeName() {
+  // Storing the player's name when they submit the name field
+  function storeName() {
  
   const name = nameInput.value.trim();
 
@@ -81,17 +81,9 @@ function displayQuestion() {
   
   questionElement.textContent = currentQuestion.question;
 
-  const answerElements = document.querySelectorAll('.answer');
-  answerElements.forEach((element, i) => {
-    element.innerHTML = `${answerLetters[i]}) ${currentQuestion.answers[i]}`;
-    element.classList.remove('selected');
-    element.addEventListener('click', () => {
-      answerElements.forEach(element => {
-        element.classList.remove('selected');
-      });
-      element.classList.add('selected');
-    });
-  });
+  // Create an unordered list element to hold the answer options
+  const answerList = document.createElement('ul');
+
 }
 
 
