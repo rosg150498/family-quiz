@@ -129,6 +129,12 @@ body{
     padding: 2rem 2rem;
 }
 
+#question{
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    margin-top: 18px;
+}
+
 #quiz-instruction{
     font-family: 'Lato', sans-serif;
     font-size: 26px;
@@ -152,11 +158,11 @@ h2{
     color: #FFFFFF;
 }
 
-.question-text{
+#question{
     font-size: 24px;
     color: #FFFFFF;
     font-weight: bold;
-    margin-top: -35rem;
+    margin-top: 4rem;
     margin-left: 12rem;
 }
 

@@ -1,4 +1,9 @@
 const submitButton = document.getElementById('submit-answer');
+const nameInput = document.getElementById('name');
+const quizContainer = document.getElementById('quiz-container');
+const familyQuiz = document.getElementById('family-name');
+const questionElement = document.getElementById('question');
+
 
 function validateName(name) {
   const nameRegex = /^[a-zA-Z\s'-]+$/;
@@ -8,9 +13,10 @@ function validateName(name) {
 // Defining a variable to store the player's name
 let playerName;
 
+
 // Storing the player's name when they submit the name field
 function storeName() {
-  const nameInput = document.getElementById('name');
+ 
   const name = nameInput.value.trim();
 
   if (name.length === 0) {
@@ -18,7 +24,7 @@ function storeName() {
     errorElement.textContent = 'Please enter your name';
     errorElement.classList.add('error-message');
 
-    const quizContainer = document.getElementById('quiz-container');
+    
     quizContainer.insertBefore(errorElement, quizContainer.firstChild);
 
     return;
@@ -32,7 +38,7 @@ function storeName() {
   nameDisplayElement.classList.add('family-name');
 
   // Appending the name element to the container above the quiz questions
-  const familyQuiz = document.getElementById('family-name');
+  
   familyQuiz.insertBefore(nameDisplayElement, familyQuiz.children[1]);
 
   document.getElementById('submit-name').removeEventListener('click', storeName);
@@ -72,7 +78,7 @@ function addQuestionsToQuiz(questionsData) {
 // Displaying the current question
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
-  const questionElement = document.getElementById('question');
+  
   questionElement.textContent = currentQuestion.question;
 
   const answerElements = document.querySelectorAll('.answer');
