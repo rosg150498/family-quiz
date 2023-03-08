@@ -88,6 +88,16 @@ function displayQuestion() {
     currentQuestion.answers.forEach((answer, index) => {
     const answerItem = document.createElement('li');
 
+
+  // Adding a label element with a radio input for the answer option
+    const answerLabel = document.createElement('label');
+    const answerInput = document.createElement('input');
+    answerInput.type = 'radio';
+    answerInput.name = 'answer';
+    answerInput.value = answer;
+    answerInput.id = `answer-${index}`;
+    answerLabel.setAttribute('for', `answer-${index}`);
+
     });
 
 
