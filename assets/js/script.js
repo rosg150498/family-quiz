@@ -3,6 +3,7 @@ const nameInput = document.getElementById('name');
 const quizContainer = document.getElementById('quiz-container');
 const familyQuiz = document.getElementById('family-name');
 const questionElement = document.getElementById('question');
+const quizAnswers = document.getElementsByClassName('quiz-answers')[0];
 
 
 function validateName(name) {
@@ -113,8 +114,9 @@ function displayQuestion() {
     });    
 
 
-    };
-
+  // Appending the answer list to the quiz answers section
+    quizAnswers.appendChild(answerList);
+  }
 
 
 function addQuestionsToQuiz(questionsData) {
