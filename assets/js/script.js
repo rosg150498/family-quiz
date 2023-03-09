@@ -84,6 +84,7 @@ function displayQuestion() {
 
   // Create an unordered list element to hold the answer options
   const answerList = document.createElement('ul');
+  answerList.style.listStyle = 'none';
  
   // Loop through each answer option and create a list item element for it
     currentQuestion.answers.forEach((answer, index) => {
