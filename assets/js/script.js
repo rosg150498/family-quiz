@@ -80,6 +80,7 @@ function displayQuestion() {
   // Loop through each answer option and create a list item element for it
   currentQuestion.answers.forEach((answer, index) => {
     const answerItem = document.createElement('li');
+    answerItem.style.marginTop = '4rem';
 
     // Adding a label element with a radio input for the answer option
     const answerLabel = document.createElement('label');
