@@ -64,17 +64,6 @@ function loadQuestion() {
     .then(data => addQuestionsToQuiz(data.results));
 }
 
-// Function that adds quiz questions to the questions array
-function addQuestionsToQuiz(questionsData) {
-  questionsData.forEach(entry => {
-    const question = {
-      question: entry.question,
-      correct_answer: entry.correct_answer,
-      answers: [...entry.incorrect_answers, entry.correct_answer]
-    };
-    questions.push(question);
-  });
-}
 
 // Displaying the current question
 function displayQuestion() {
@@ -149,6 +138,36 @@ function generateAnswers(listofAnswers) {
   });
 }
 
+
+
+submitButton.addEventListener('click', () => {
+  const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+  if (!selectedAnswer) {
+    const errorElement = document.createElement('p');
+    errorElement.textContent = 'Please select an answer';
+    errorElement.classList.add('error-message');
+
+    quizContainer.insertBefore(errorElement, quizContainer.firstChild);
+    return;
+  }
+
+  const playerAnswer = selectedAnswer.value;
+
+  if (playerAnswer === questions[currentQuestionIndex].correct_answer) {
+    alert('Correct answer!');
+  } else {
+    alert('Wrong answer!');
+  }
+
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex >= questions.length) {
+    alert('Quiz completed!');
+  } else {
+    displayQuestion();
+  }
+});
 
 // Starting the quiz
 loadQuestion(); 
