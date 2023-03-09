@@ -54,7 +54,7 @@ const quizAnswerRef = Array.from(document.querySelectorAll('.answer'));
 
 let questions = [];
 let currentQuestionIndex = 0;
-let score = 0;
+
 
   // Function that loads quiz questions from API
 function loadQuestion() {
@@ -79,19 +79,20 @@ function addQuestionsToQuiz(questionsData) {
 // Displaying the current question
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
-  
+
   questionElement.textContent = currentQuestion.question;
+
+  quizAnswers.innerHTML = ''; // clear the quiz answers section
 
   // Create an unordered list element to hold the answer options
   const answerList = document.createElement('ul');
   answerList.style.listStyle = 'none';
- 
+
   // Loop through each answer option and create a list item element for it
-    currentQuestion.answers.forEach((answer, index) => {
+  currentQuestion.answers.forEach((answer, index) => {
     const answerItem = document.createElement('li');
 
-
-  // Adding a label element with a radio input for the answer option
+    // Adding a label element with a radio input for the answer option
     const answerLabel = document.createElement('label');
     const answerInput = document.createElement('input');
     answerInput.type = 'radio';
@@ -100,25 +101,20 @@ function displayQuestion() {
     answerInput.id = `answer-${index}`;
     answerLabel.setAttribute('for', `answer-${index}`);
 
-
-  // Adding the answer option text to the label element
+    // Adding the answer option text to the label element
     answerLabel.textContent = `${answerLetters[index]}) ${answer}`;
 
+    // Appending the input and label elements to the list item
+    answerItem.appendChild(answerInput);
+    answerItem.appendChild(answerLabel);
 
-  // Appending the input and label elements to the list item
-      answerItem.appendChild(answerInput);
-      answerItem.appendChild(answerLabel);
-
-  
-  // Appending the list item to the answer list
-      answerList.appendChild(answerItem);
-    });    
-
+    // Appending the list item to the answer list
+    answerList.appendChild(answerItem);
+  });
 
   // Appending the answer list to the quiz answers section
-    quizAnswers.appendChild(answerList);
-  }
-
+  quizAnswers.appendChild(answerList);
+}
 
 function addQuestionsToQuiz(questionsData) {
   questionsData.forEach(entry => {
@@ -156,3 +152,9 @@ function generateAnswers(listofAnswers) {
 
 // Starting the quiz
 loadQuestion(); 
+
+
+
+
+
+
