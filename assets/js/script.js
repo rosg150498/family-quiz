@@ -155,9 +155,9 @@ submitButton.addEventListener('click', () => {
   const playerAnswer = selectedAnswer.value;
 
   if (playerAnswer === questions[currentQuestionIndex].correct_answer) {
-    alert('Correct answer!');
+    alert('Congrats, You have selected the Correct answer!');
   } else {
-    alert('Wrong answer!');
+    alert('Sorry, You have selected the Wrong answer!');
   }
 
   currentQuestionIndex++;
