@@ -16,39 +16,32 @@ let playerName;
 
 
   // Storing the player's name when they submit the name field
-  function storeName() {
- 
-  const name = nameInput.value.trim();
-
-  if (name.length === 0) {
-    const errorElement = document.createElement('p');
-    errorElement.textContent = 'Please enter your name';
-    errorElement.classList.add('error-message');
-
-    
-    quizContainer.insertBefore(errorElement, quizContainer.firstChild);
-
-    return;
-  }
-
-  playerName = name;
-
-  // Creating a <p> element to display the name
-  const nameDisplayElement = document.createElement('p');
-  nameDisplayElement.textContent = `Family Name: ${playerName}`;
-  nameDisplayElement.classList.add('family-name');
-
-  // Appending the name element to the container above the quiz questions
   
-  familyQuiz.insertBefore(nameDisplayElement, familyQuiz.children[1]);
-
-  document.getElementById('submit-name').removeEventListener('click', storeName);
-}
-
-// Adding a click event listener to the submit button
-document.getElementById('submit-name').addEventListener('click', storeName);
-
-const quizAnswerRef = Array.from(document.querySelectorAll('.answer'));
+  function storeName() {
+    const name = nameInput.value.trim();
+  
+    if (name.length === 0) {
+      const errorElement = document.createElement('p');
+      errorElement.textContent = 'Please enter your name';
+      errorElement.classList.add('error-message');
+  
+      quizContainer.insertBefore(errorElement, quizContainer.firstChild);
+  
+      return;
+    }
+  
+    playerName = name;
+  
+    // Creating a <p> element to display the name
+    const nameDisplayElement = document.createElement('p');
+    nameDisplayElement.textContent = `Family Name: ${playerName}`;
+    nameDisplayElement.classList.add('family-name');
+  
+    // Appending the name element to the family name div
+    document.getElementById('family-name').appendChild(nameDisplayElement);
+  
+    document.getElementById('submit-name').removeEventListener('click', storeName);
+  }
 
 // Family Quiz Game Section
 
