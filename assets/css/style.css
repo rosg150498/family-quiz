@@ -62,6 +62,15 @@ body{
    width: 100px;
 }
 
+#family-name {
+    font-family: 'Open Sans';
+    background-color: #E6E6E6;
+    color: #248BE5;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 2.5rem 2.5rem 2.5rem 12rem;
+  }
+
 .error-message{
     color: #AD0401;
     font-weight: bold;
