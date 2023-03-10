@@ -36,12 +36,16 @@ let playerName;
     const nameDisplayElement = document.createElement('p');
     nameDisplayElement.textContent = `Family Name: ${playerName}`;
     nameDisplayElement.classList.add('family-name');
-  
+
+
     // Appending the name element to the family name div
-    document.getElementById('family-name').appendChild(nameDisplayElement);
-  
-    document.getElementById('submit-name').removeEventListener('click', storeName);
+    
+    quizContainer.insertBefore(nameDisplayElement, quizContainer.children[1]);
+
   }
+    
+    document.getElementById('submit-name').addEventListener('click', storeName);
+    
 
 // Family Quiz Game Section
 
