@@ -33,7 +33,7 @@ let playerName;
     playerName = name;
   
     // Getting reference to family name div and updating its text content
-    const familyNameDiv = document.getElementById('family-name');
+    const familyNameDiv = document.getElementById('family-name'); 
     familyNameDiv.textContent = `Family Name: ${playerName}`;
   
     // Removing the name input field and displaying the quiz questions section 
