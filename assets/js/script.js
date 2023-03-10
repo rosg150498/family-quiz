@@ -180,9 +180,6 @@ loadQuestion();
 
 
 
-// Starting the quiz
-loadQuestion(); 
-
 
 
 
