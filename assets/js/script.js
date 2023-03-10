@@ -32,19 +32,20 @@ let playerName;
   
     playerName = name;
   
-    // Creating a <p> element to display the name
-    const nameDisplayElement = document.createElement('p');
-    nameDisplayElement.textContent = `Family Name: ${playerName}`;
-    nameDisplayElement.classList.add('family-name');
-
-
-    // Appending the name element to the family name div
-    
-    quizContainer.insertBefore(nameDisplayElement, quizContainer.children[1]);
-
+    // Get reference to family-name div and update its text content
+    const familyNameDiv = document.getElementById('family-name');
+    familyNameDiv.textContent = `Family Name: ${playerName}`;
+  
+    // Removing the name input field and show the quiz section
+    nameInput.remove();
+    document.getElementById('submit-name').remove();
+    familyQuiz.classList.remove('hidden');
   }
-    
-    document.getElementById('submit-name').addEventListener('click', storeName);
+
+
+  const submitNameButton = document.getElementById('submit-name');
+
+  submitNameButton.addEventListener('click', storeName);
 
 
 // Family Quiz Game Section
