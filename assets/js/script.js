@@ -45,7 +45,7 @@ let playerName;
   }
     
     document.getElementById('submit-name').addEventListener('click', storeName);
-    
+
 
 // Family Quiz Game Section
 
@@ -65,6 +65,9 @@ function loadQuestion() {
 // Displaying the current question
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
+
+  // Adding the Family Name Element to the container
+  
 
   questionElement.textContent = currentQuestion.question;
 
@@ -160,12 +163,22 @@ submitButton.addEventListener('click', () => {
 
   currentQuestionIndex++;
 
-  if (currentQuestionIndex >= questions.length) {
+  if (currentQuestionIndex === questions.length) {
     alert('Quiz completed!');
-  } else {
-    displayQuestion();
+    return;
   }
+
+  loadQuestion();
+  displayQuestion();
 });
+
+// Starting the quiz
+loadQuestion();
+
+
+
+
+
 
 // Starting the quiz
 loadQuestion(); 
