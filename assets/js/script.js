@@ -61,6 +61,8 @@ function loadQuestion() {
   fetch(APIUrl)
     .then(result => result.json())
     .then(data => addQuestionsToQuiz(data.results));
+    questions = [];
+    addQuestionsToQuiz(data.results.slice(0, 10));
 }
 
 
