@@ -154,6 +154,7 @@ submitButton.addEventListener('click', () => {
 
   if (playerAnswer === questions[currentQuestionIndex].correct_answer) {
     alert('Congrats, You have selected the Correct answer!');
+    score += 10;
   } else {
     alert('Sorry, You have selected the Wrong answer!');
   }
@@ -161,13 +162,15 @@ submitButton.addEventListener('click', () => {
   currentQuestionIndex++;
 
   if (currentQuestionIndex === questions.length) {
-    alert('Quiz completed!');
+    const finalScore = score;
+    alert(`Quiz completed! Your score is ${finalScore}`);
     return;
   }
 
   loadQuestion(currentQuestionIndex);
   displayQuestion();
 });
+
 
 // Starting the quiz
 loadQuestion();
