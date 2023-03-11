@@ -181,3 +181,22 @@ submitButton.addEventListener('click', () => {
 // Starting the quiz
 loadQuestion();
 
+
+backToMainMenuButton.addEventListener('click', () => {
+
+  // Show the main menu div
+  mainMenu.style.display = "block";
+  
+  // Hide the family-quiz div
+  quizGame.style.display = "none";
+  
+  // Reset the quiz variables
+  questions = [];
+  currentQuestionIndex = 0;
+  score = 0;
+  numQuestionsLoaded = 0;
+  
+  // Clear the quiz container
+  quizContainer.innerHTML = '';
+});
+
