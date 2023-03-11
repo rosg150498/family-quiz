@@ -15,7 +15,7 @@ function validateName(name) {
 let playerName;
 
 
-  // Storing the player's name when they submit the name field
+// Storing the player's name when they submit the name field
   
   function storeName() {
     const name = nameInput.value.trim();
@@ -110,11 +110,20 @@ function addQuestionsToQuiz(questionsData) {
   displayQuestion();
 }
 
+let numQuestionsLoaded = 0;
+
 function loadQuestion() {
   const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
   fetch(APIUrl)
     .then(result => result.json())
-    .then(data => addQuestionsToQuiz(data.results));
+    .then(data => {
+      addQuestionsToQuiz(data.results);
+      numQuestionsLoaded++;
+      if (numQuestionsLoaded >= 10) {
+        alert('Quiz completed!');
+        displayLeaderboard();
+      }
+    });
 }
 
   
@@ -143,7 +152,7 @@ submitButton.addEventListener('click', () => {
 
   currentQuestionIndex++;
 
-  if (currentQuestionIndex === questions.length) {
+  if (currentQuestionIndex === questions.length -1) {
     alert('Quiz completed!');
     displayLeaderboard();
     return;
