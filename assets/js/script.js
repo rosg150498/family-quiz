@@ -6,6 +6,7 @@ const questionElement = document.getElementById('question');
 const quizAnswers = document.getElementsByClassName('quiz-answers')[0];
 const mainMenu = document.getElementById('main-menu');
 const quizGame = document.getElementById('family-quiz');
+const backToMainMenuButton = document.getElementById('quiz-main-menu');
 
 function validateName(name) {
   const nameRegex = /^[a-zA-Z\s'-]+$/;
@@ -179,5 +180,4 @@ submitButton.addEventListener('click', () => {
 
 // Starting the quiz
 loadQuestion();
-
 
