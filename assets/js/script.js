@@ -146,6 +146,7 @@ submitButton.addEventListener('click', () => {
   const playerAnswer = selectedAnswer.value;
 
   if (playerAnswer === questions[currentQuestionIndex].correct_answer) {
+    score += 10;
     alert('Congrats, You have selected the Correct answer!');
   } else {
     alert('Sorry, You have selected the Wrong answer!');
@@ -157,6 +158,10 @@ submitButton.addEventListener('click', () => {
     alert('Quiz completed!');
     return;
   }
+
+
+  document.getElementById('score').textContent = `Score: ${score}`;
+  
 
   loadQuestion();
   displayQuestion();
