@@ -19,7 +19,6 @@ let playerName;
 // Storing the player's name when they submit the name field
   
 function storeName(event) {
-  
   event.preventDefault();
   
   const name = nameInput.value.trim();
@@ -43,12 +42,14 @@ function storeName(event) {
   // Removing the name input field and show the quiz section
   nameInput.remove();
   document.getElementById('submit-name').remove();
-
-  // Remove the hidden class from the family-quiz div
   familyQuiz.classList.remove('hidden');
 
   // Hide the main menu div
   mainMenu.style.display = "none";
+
+  // Move the quiz game div to the top of the page
+  quizGame.style.position = "absolute";
+  quizGame.style.marginTop = "0.5rem";
 }
 
 
