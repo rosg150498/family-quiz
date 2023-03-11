@@ -178,26 +178,35 @@ submitButton.addEventListener('click', () => {
 loadQuestion();
 
 
-backToMainMenuButton.addEventListener('click', () => {
-  
-  // Show the main menu div
-  mainMenu.style.display = "block";
 
-  // Reset the family name element text content
-  const familyNameDiv = document.getElementById('family-name');
-  familyNameDiv.textContent = "Family Name: ";
 
-  // Hide the family-quiz div and clear the quiz answers section
-  quizGame.classList.add('hidden');
-  quizAnswers.innerHTML = '';
-
-  // Reset the current question index and score
-  currentQuestionIndex = 0;
-  score = 0;
-
-  // Clear the quiz container
-    quizContainer.innerHTML = '';
-
-    quizGame.style.display = 'none';
+  document.querySelector("#quiz-main-menu").addEventListener("click", function() {
     
+    // Hide the family-quiz div
+    document.querySelector("#family-quiz").style.display = "none";
+    
+    // Display the main menu
+    document.querySelector("#main-menu").style.display = "block";
+  });
+
+
+
+  document.querySelector("#submit-name").addEventListener("click", function() {
+    
+    // Retriving the value of the family name input box
+    var familyName = document.querySelector("#fname").value;
+  
+    // Checking if the family name is valid (i.e. not empty)
+    if (familyName.trim() !== "") {
+      
+      // Display the family-quiz div
+      document.querySelector("#family-quiz").style.display = "block";
+      
+      // Hiding the main menu
+      document.querySelector("#main-menu").style.display = "none";
+    } else {
+      
+      // Displaying an error message if family name is empty
+      alert("Please enter a valid family name.");
+    }
   });
