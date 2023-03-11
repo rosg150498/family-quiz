@@ -4,7 +4,8 @@ const quizContainer = document.getElementById('quiz-container');
 const familyQuiz = document.getElementById('family-name');
 const questionElement = document.getElementById('question');
 const quizAnswers = document.getElementsByClassName('quiz-answers')[0];
-
+const mainMenu = document.getElementById('main-menu');
+const quizGame = document.getElementById('family-quiz');
 
 function validateName(name) {
   const nameRegex = /^[a-zA-Z\s'-]+$/;
