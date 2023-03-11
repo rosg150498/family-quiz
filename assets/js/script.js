@@ -18,30 +18,38 @@ let playerName;
 
 // Storing the player's name when they submit the name field
   
-  function storeName() {
-    const name = nameInput.value.trim();
+function storeName(event) {
   
-    if (name.length === 0) {
-      const errorElement = document.createElement('p');
-      errorElement.textContent = 'Please enter your name';
-      errorElement.classList.add('error-message');
+  event.preventDefault();
   
-      quizContainer.insertBefore(errorElement, quizContainer.firstChild);
+  const name = nameInput.value.trim();
   
-      return;
-    }
+  if (name.length === 0) {
+    const errorElement = document.createElement('p');
+    errorElement.textContent = 'Please enter your name';
+    errorElement.classList.add('error-message');
   
-    playerName = name;
+    quizContainer.insertBefore(errorElement, quizContainer.firstChild);
   
-    // Get reference to family-name div and update its text content
-    const familyNameDiv = document.getElementById('family-name');
-    familyNameDiv.textContent = `Family Name: ${playerName}`;
-  
-    // Removing the name input field and show the quiz section
-    nameInput.remove();
-    document.getElementById('submit-name').remove();
-    familyQuiz.classList.remove('hidden');
+    return;
   }
+  
+  playerName = name;
+  
+  // Get reference to family-name div and update its text content
+  const familyNameDiv = document.getElementById('family-name');
+  familyNameDiv.textContent = `Family Name: ${playerName}`;
+  
+  // Removing the name input field and show the quiz section
+  nameInput.remove();
+  document.getElementById('submit-name').remove();
+
+  // Remove the hidden class from the family-quiz div
+  familyQuiz.classList.remove('hidden');
+
+  // Hide the main menu div
+  mainMenu.style.display = "none";
+}
 
 
   const submitNameButton = document.getElementById('submit-name');
