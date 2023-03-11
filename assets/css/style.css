@@ -199,28 +199,6 @@ h2{
     border-radius: 2rem;
 }
 
-
-#leaderboard {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  #leaderboard h2 {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-  
-  #leaderboard h3 {
-    margin-top: 0;
-  }
-  
-  #leaderboard p {
-    margin: 0;
-  }
-
 #quiz-main-menu{
     background-color: #E6E6E6;
     border-color: #FFFFFF;
