@@ -56,7 +56,7 @@ let currentQuestionIndex = 0;
 
   // Function that loads quiz questions from API
 function loadQuestion() {
-  const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
+  const APIUrl = `https://opentdb.com/api.php?amount=10&category=16&type=multiple`;
   fetch(APIUrl)
     .then(result => result.json())
     .then(data => addQuestionsToQuiz(data.results));
