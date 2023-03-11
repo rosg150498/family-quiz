@@ -32,11 +32,11 @@ let playerName;
   
     playerName = name;
   
-    // Getting reference to family name div and updating its text content
-    const familyNameDiv = document.getElementById('family-name'); 
+    // Get reference to family-name div and update its text content
+    const familyNameDiv = document.getElementById('family-name');
     familyNameDiv.textContent = `Family Name: ${playerName}`;
   
-    // Removing the name input field and displaying the quiz questions section 
+    // Removing the name input field and show the quiz section
     nameInput.remove();
     document.getElementById('submit-name').remove();
     familyQuiz.classList.remove('hidden');
@@ -52,17 +52,14 @@ let playerName;
 
 let questions = [];
 let currentQuestionIndex = 0;
-let score = 0;
 
 
   // Function that loads quiz questions from API
 function loadQuestion() {
-  const APIUrl = `https://opentdb.com/api.php?amount=10&category=16&type=multiple`;
+  const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
   fetch(APIUrl)
     .then(result => result.json())
     .then(data => addQuestionsToQuiz(data.results));
-    questions = [];
-    addQuestionsToQuiz(data.results.slice(0, 10));
 }
 
 
@@ -123,20 +120,16 @@ function addQuestionsToQuiz(questionsData) {
   displayQuestion();
 }
 
-
-// Assign Letters to quiz answers
-const answerLetters = ['A', 'B', 'C', 'D'];
-
-function generateAnswers(listofAnswers) {
-  quizAnswerRef.forEach((link, i) => {
-    const answerLetter = answerLetters[i];
-    const answerElement = link;
-    answerElement.innerHTML = `${answerLetter}) ${listofAnswers[i]}`;
-    answerElement.classList.remove('selected');
-  });
+function loadQuestion() {
+  const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
+  fetch(APIUrl)
+    .then(result => result.json())
+    .then(data => addQuestionsToQuiz(data.results));
 }
 
-
+  
+// Assign Letters to quiz answers
+const answerLetters = ['A', 'B', 'C', 'D'];
 
 submitButton.addEventListener('click', () => {
   const selectedAnswer = document.querySelector('input[name="answer"]:checked');
@@ -154,7 +147,6 @@ submitButton.addEventListener('click', () => {
 
   if (playerAnswer === questions[currentQuestionIndex].correct_answer) {
     alert('Congrats, You have selected the Correct answer!');
-    score += 10;
   } else {
     alert('Sorry, You have selected the Wrong answer!');
   }
@@ -162,26 +154,16 @@ submitButton.addEventListener('click', () => {
   currentQuestionIndex++;
 
   if (currentQuestionIndex === questions.length) {
-    const finalScore = score;
-    alert(`Quiz completed! Your score is ${finalScore}`);
+    alert('Quiz completed!');
+    displayLeaderboard();
     return;
   }
 
-  loadQuestion(currentQuestionIndex);
+  loadQuestion();
   displayQuestion();
 });
 
-
 // Starting the quiz
 loadQuestion();
-
-
-
-
-
-
-
-
-
 
 
