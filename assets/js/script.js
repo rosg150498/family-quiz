@@ -120,14 +120,7 @@ function addQuestionsToQuiz(questionsData) {
   displayQuestion();
 }
 
-function loadQuestion() {
-  const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
-  fetch(APIUrl)
-    .then(result => result.json())
-    .then(data => addQuestionsToQuiz(data.results));
-}
 
-  
 // Assign Letters to quiz answers
 const answerLetters = ['A', 'B', 'C', 'D'];
 
@@ -169,7 +162,7 @@ submitButton.addEventListener('click', () => {
     return;
   }
 
-  loadQuestion();
+  loadQuestion(currentQuestionIndex);
   displayQuestion();
 });
 
