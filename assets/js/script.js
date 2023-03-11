@@ -52,6 +52,7 @@ let playerName;
 
 let questions = [];
 let currentQuestionIndex = 0;
+let score = 0;
 
 
   // Function that loads quiz questions from API
