@@ -50,7 +50,7 @@ function storeName(event) {
   quizGame.style.marginTop = "0.5rem";
 }
 
-  submitNameButton.addEventListener('click', storeName);
+submitNameButton.addEventListener('click', storeName);
 
 
 // Family Quiz Game Section
@@ -194,7 +194,7 @@ loadQuestion();
   document.querySelector("#submit-name").addEventListener("click", function() {
     
     // Retriving the value of the family name input box
-    var familyName = document.querySelector("#fname").value;
+    var familyName = document.querySelector("#name").value;
   
     // Checking if the family name is valid (i.e. not empty)
     if (familyName.trim() !== "") {
@@ -209,4 +209,23 @@ loadQuestion();
       // Displaying an error message if family name is empty
       alert("Please enter a valid family name.");
     }
+
+
+    document.querySelector('#submit-name').addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const familyName = document.querySelector('#name-input').value;
+      
+      // check if the family name is valid and proceed to display the family-quiz div
+      if (familyName.trim() !== '') {
+        familyQuiz.style.display = 'block';
+      }
+
+
+
   });
+
+
+
+  
+});
