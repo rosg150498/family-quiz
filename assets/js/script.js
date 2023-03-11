@@ -113,7 +113,7 @@ function addQuestionsToQuiz(questionsData) {
 let numQuestionsLoaded = 0;
 
 function loadQuestion() {
-  const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
+  const APIUrl = `https://opentdb.com/api.php?amount=10&category=16&type=multiple`;
   fetch(APIUrl)
     .then(result => result.json())
     .then(data => {
@@ -152,9 +152,8 @@ submitButton.addEventListener('click', () => {
 
   currentQuestionIndex++;
 
-  if (currentQuestionIndex === questions.length -1) {
+  if (currentQuestionIndex === questions.length) {
     alert('Quiz completed!');
-    displayLeaderboard();
     return;
   }
 
