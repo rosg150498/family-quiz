@@ -197,4 +197,7 @@ backToMainMenuButton.addEventListener('click', () => {
 
   // Clear the quiz container
     quizContainer.innerHTML = '';
+
+    quizGame.style.display = 'none';
+    
   });
