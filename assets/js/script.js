@@ -36,13 +36,8 @@ function storeName(event) {
   
   playerName = name;
   
-  // Get reference to family-name div and update its text content
-  const familyNameDiv = document.getElementById('family-name');
-  familyNameDiv.textContent = `Family Name: ${playerName}`;
   
   // Removing the name input field and show the quiz section
-  nameInput.remove();
-  document.getElementById('submit-name').remove();
   familyQuiz.classList.remove('hidden');
 
   // Hide the main menu div
@@ -52,9 +47,6 @@ function storeName(event) {
   quizGame.style.position = "absolute";
   quizGame.style.marginTop = "0.5rem";
 }
-
-
-  const submitNameButton = document.getElementById('submit-name');
 
   submitNameButton.addEventListener('click', storeName);
 
@@ -69,8 +61,9 @@ let score = 0;
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
 
-  // Adding the Family Name Element to the container
-  
+  // Adding the Family Name and Score Element to the container
+  const familyNameDiv = document.getElementById('family-name');
+  familyNameDiv.textContent = `Family Name: ${playerName} Score: ${score}`;
 
   questionElement.textContent = currentQuestion.question;
 
@@ -183,20 +176,22 @@ loadQuestion();
 
 
 backToMainMenuButton.addEventListener('click', () => {
-
+  
   // Show the main menu div
   mainMenu.style.display = "block";
-  
-  // Hide the family-quiz div
-  quizGame.style.display = "none";
-  
-  // Reset the quiz variables
-  questions = [];
+
+  // Reset the family name element text content
+  const familyNameDiv = document.getElementById('family-name');
+  familyNameDiv.textContent = "Family Name: ";
+
+  // Hide the family-quiz div and clear the quiz answers section
+  quizGame.classList.add('hidden');
+  quizAnswers.innerHTML = '';
+
+  // Reset the current question index and score
   currentQuestionIndex = 0;
   score = 0;
-  numQuestionsLoaded = 0;
-  
-  // Clear the quiz container
-  quizContainer.innerHTML = '';
-});
 
+  // Clear the quiz container
+    quizContainer.innerHTML = '';
+  });
