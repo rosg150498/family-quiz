@@ -53,16 +53,6 @@ let playerName;
 let questions = [];
 let currentQuestionIndex = 0;
 
-
-  // Function that loads quiz questions from API
-function loadQuestion() {
-  const APIUrl = `https://opentdb.com/api.php?amount=1&category=16&type=multiple`;
-  fetch(APIUrl)
-    .then(result => result.json())
-    .then(data => addQuestionsToQuiz(data.results));
-}
-
-
 // Displaying the current question
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
