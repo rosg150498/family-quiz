@@ -66,6 +66,7 @@ function displayQuestion() {
   // Adding the Family Name and Score Element to the container
   const familyNameDiv = document.getElementById('family-name');
   familyNameDiv.textContent = `Family Name: ${playerName} Score: ${score}`;
+  
 
   questionElement.textContent = currentQuestion.question;
 
