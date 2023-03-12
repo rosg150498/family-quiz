@@ -232,6 +232,10 @@ loadQuestion();
     score: score
   };
   
+  highScores.push(scoreObject);
+
+  highScores.sort((a, b) => b.score - a.score);
+
   
 });
 
