@@ -305,4 +305,14 @@ Reflection on the errors and disappointments I encountered I removed the unused 
 
 ## Deployment 
 
+The project was created by pushing relevant commits step by step to each section of the quiz and was deployed using GitHub by the following steps.
+
+    *Navigate to the repository on github and click 'Settings'.
+    *Then select 'Pages' on the side navigation.
+    *Select the 'None' dropdown, and then click 'master'.
+    *Click on the 'Save' button.
+    *Now the website is now live on [https://sam-timmins.github.io/T4Tri-triathlon-club/](https://rosg150498.github.io/travel-ireland/)
+    *If any changes were required, they can be done, commited and pushed to GitHub and the changes will be updated.
+
+
 ### References / Sources of Inspiration
