@@ -163,12 +163,11 @@ submitButton.addEventListener('click', () => {
 
   if (currentQuestionIndex === questions.length) {
     alert('Quiz completed!');
+    displayLeaderboard(); // display the leaderboard
     return;
   }
 
-
   document.getElementById('score').textContent = `Score: ${score}`;
-  
 
   loadQuestion();
   displayQuestion();
@@ -225,7 +224,32 @@ loadQuestion();
 
   });
 
+ 
+  const highScores = [];
+
+  const scoreObject = {
+    name: playerName,
+    score: score
+  };
+  
+  
+});
+
+
+
+
 
 
   
-});
+
+
+
+
+
+
+
+
+
+
+
+
