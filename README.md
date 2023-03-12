@@ -160,6 +160,15 @@ I have included wireframes of the sections that I intend to include in the famil
 
 ### Resources
 
+* Balsamiq
+* Coolors.co
+* W3C HTML Markup Validation Service [W3C Validator] (https://validator.w3.org/)
+* The W3C CSS Validation Service [Jigsaw CSS Validator] (https://jigsaw.w3.org/css-validator/)
+* JSHint [Linter] (https://jshint.com/)
+* Gitpod
+* WebAIM Contrast Checker
+* Flat Icon [Icons] (https://www.flaticon.com/)
+
 ### Frameworks & Libraries
 
 ## Testing & Bugs
