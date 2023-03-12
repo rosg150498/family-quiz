@@ -239,7 +239,7 @@ loadQuestion();
 
   highScores.forEach((scoreObject, index) => {
     const scoreElement = document.createElement('p');
-   
+    scoreElement.textContent = `${index + 1}. ${scoreObject.name}: ${scoreObject.score}`;
   });
   
 });
