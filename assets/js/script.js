@@ -9,7 +9,7 @@ const quizGame = document.getElementById('family-quiz');
 const backToMainMenuButton = document.getElementById('quiz-main-menu');
 const submitNameButton = document.getElementById('submit-name');
 const quizScore = document.getElementById('score');
-const userLeaderboard = document.getElementById('leaderboard');
+
 
 function validateName(name) {
   const nameRegex = /^[a-zA-Z\s'-]+$/;
@@ -39,6 +39,9 @@ function storeName(event) {
   
   playerName = name;
   
+  // Update the family name element to include the player's name and score
+  const familyNameDiv = document.getElementById('family-name');
+  familyNameDiv.textContent = `Welcome ${playerName} to Trivia Family Quiz, Your Score is: ${score}`;
   
   // Removing the name input field and show the quiz section
   familyQuiz.classList.remove('hidden');
@@ -49,6 +52,10 @@ function storeName(event) {
   // Move the quiz game div to the top of the page
   quizGame.style.position = "absolute";
   quizGame.style.marginTop = "0.5rem";
+  
+  // Load the first question and display it
+  loadQuestion();
+  displayQuestion();
 }
 
 submitNameButton.addEventListener('click', storeName);
@@ -60,13 +67,14 @@ let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
+
 // Displaying the current question
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
 
   // Adding the Family Name and Score Element to the container
   const familyNameDiv = document.getElementById('family-name');
-  familyNameDiv.textContent = `Family Name: ${playerName} Score: ${score}`;
+  familyNameDiv.textContent = `Welcome ${playerName} to Trivia Family Quiz, Your Score is: ${score}`;
   
 
   questionElement.textContent = currentQuestion.question;
@@ -130,7 +138,7 @@ function loadQuestion() {
       numQuestionsLoaded++;
       if (numQuestionsLoaded >= 10) {
         alert('Quiz completed!');
-        displayLeaderboard();
+        
       }
     });
 }
@@ -164,7 +172,6 @@ submitButton.addEventListener('click', () => {
 
   if (currentQuestionIndex === questions.length) {
     alert('Quiz completed!');
-    displayLeaderboard(); // display the leaderboard
     return;
   }
 
@@ -240,18 +247,6 @@ loadQuestion();
   highScores.forEach((scoreObject, index) => {
     const scoreElement = document.createElement('p');
     scoreElement.textContent = `${index + 1}. ${scoreObject.name}: ${scoreObject.score}`;
-    leaderboard.appendChild(scoreElement);
   });
 
-
-  // Initializing the leaderboard
-  let leaderboard = [];
-
-  // Function to add the score to the leaderboard
-  function addToLeaderboard(name, score) {
-    leaderboard.push({ name, score });
-  }
-  
 });
-
-
