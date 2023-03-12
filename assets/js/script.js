@@ -9,6 +9,7 @@ const quizGame = document.getElementById('family-quiz');
 const backToMainMenuButton = document.getElementById('quiz-main-menu');
 const submitNameButton = document.getElementById('submit-name');
 const quizScore = document.getElementById('score');
+const userLeaderboard = document.getElementById('leaderboard');
 
 function validateName(name) {
   const nameRegex = /^[a-zA-Z\s'-]+$/;
