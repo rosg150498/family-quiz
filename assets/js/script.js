@@ -237,6 +237,10 @@ loadQuestion();
 
   highScores.sort((a, b) => b.score - a.score);
 
+  highScores.forEach((scoreObject, index) => {
+    const scoreElement = document.createElement('p');
+   
+  });
   
 });
 
