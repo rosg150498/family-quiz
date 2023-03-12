@@ -316,3 +316,17 @@ The project was created by pushing relevant commits step by step to each section
 
 
 ### References / Sources of Inspiration
+
+https://developer.mozilla.org/
+
+<hr>
+
+James Q Quick - Developer. Speaker. Teacher.
+
+<hr>
+
+https://www.sitepoint.com/
+
+<hr>
+
+https://javascript.info/
