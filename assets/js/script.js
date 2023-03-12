@@ -242,6 +242,11 @@ loadQuestion();
     scoreElement.textContent = `${index + 1}. ${scoreObject.name}: ${scoreObject.score}`;
     leaderboard.appendChild(scoreElement);
   });
+
+
+  // Initializing the leaderboard
+  let leaderboard = [];
+
   
 });
 
