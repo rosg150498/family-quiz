@@ -171,6 +171,9 @@ I have included wireframes of the sections that I intend to include in the famil
 
 ### Frameworks & Libraries
 
+* Google Fonts [Google Fonts] (https://fonts.google.com/)
+* Open Trivia Database [Quiz API Database] (https://opentdb.com/)
+
 ## Testing & Bugs
 
 ## Deployment 
