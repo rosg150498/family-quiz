@@ -247,6 +247,10 @@ loadQuestion();
   // Initializing the leaderboard
   let leaderboard = [];
 
+  // Function to add the score to the leaderboard
+  function addToLeaderboard(name, score) {
+    leaderboard.push({ name, score });
+  }
   
 });
 
