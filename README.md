@@ -149,7 +149,94 @@ I have included wireframes of the sections that I intend to include in the famil
 
 ### Current Features
 
-### Added Features
+#### Main Menu Page
+
+This is my main menu page for the Family quiz single page website which is fully responsive across mobile screen devices max-width 320px and 470px. Users can navigate to any section of the quiz by clicking on one of the provided button and which I have set the cursor to pointer to allow users to become aware that they are navigating over that selected button link and so can add a welcoming feel. I have included an icon which I retrieved from the flat icon website to display an effective and informative representation of a rewarding experience with family members which can allow users to feel comfortable anywhere where they are located. The main menu consists of a enter name label with input box, submit name button along with a button for users to navigate to the quiz game.
+
+
+<hr>
+
+
+![Family-Quiz-Main-Menu](https://user-images.githubusercontent.com/114010857/224536438-89749bba-1c98-40ad-af5e-c18ee68ce33c.png)
+
+
+Users must enter validate information and must not be blank before playing the quiz game. Users can gain incredible experience by providing a family name in the input field. If the user clicks the submit name button without entering a family name a pop up box will be displayed and users will be informed that they need to enter a name to proceed
+
+
+<hr>
+
+
+![Family-Quiz-Enter-Valid-Name ](https://user-images.githubusercontent.com/114010857/224536519-6bf98674-f039-4070-89af-2ec3581c3075.png)
+
+
+<hr>
+
+
+This will be provided to the user if users leaves name field blank and clicks submit name
+
+
+<hr>
+
+
+![Family-Quiz-Please-Enter-Name](https://user-images.githubusercontent.com/114010857/224536574-f9f0d278-a2a7-4668-ba59-3b8c505ac2aa.png)
+
+
+<hr>
+
+
+Users can enter their family name in the name field box and can click submit when they have inputted relevant and valid details 
+
+
+<hr>
+
+
+![Trivia-Family-Quiz-Main-Menu-Test](https://user-images.githubusercontent.com/114010857/224536771-0950f7c1-145f-4752-96e3-f2531af2ea51.png)
+
+
+<hr>
+
+
+The family quiz section is similiar to the main menu section in terms of consistency. I felt it was appropriate to add an additional icon to portray an eager and determination to succeed in the enjoyable and packful theme of questions. 
+
+
+<hr>
+
+
+![Trivia-Family-Quiz-Section](https://user-images.githubusercontent.com/114010857/224536841-35b02909-567f-44c1-8a90-6f58250cc43a.png)
+
+
+<hr>
+
+The inputted family name is display inside an asthetically appealing subtle banner to allow users to easily keep track that the name is accurate and spelt correctly. Within this banner score is also included which the default score is set as 0. Users can keep track of their score at any time throughout the duration of the quiz and can feel at ease as they progress with the quite challenging questions. 
+
+
+<hr>
+
+
+![Trivia-Family-Quiz-Family-Name](https://user-images.githubusercontent.com/114010857/224536886-66a01d0d-cf4b-4178-93d5-b57dcc405e34.png)
+
+
+<hr>
+
+
+The questions and answers can be easily identified and users can select an answer by clicking one of the radio buttons which is very-friendly as they allow users to identify the answer they have selected and can change any choice with a click of a button. Once a user is satisfied with their selected answer they can submit the answer by clicking on the provided submit answer button and will then progress to the next stage of the quiz.
+
+
+<hr>
+
+
+![Trivia-Family-Quiz-Family-Questions-Answers](https://user-images.githubusercontent.com/114010857/224536905-3b37e40d-a755-44f9-ad92-2df9d1c17a30.png)
+
+
+<hr>
+
+
+I have set a total of Ten points for users who select and submit a correct answer. User can easily keep track of any correct answers in the banner and feel quite satisfied that reasonable answer points are awarded 
+
+<hr>
+
+![Trivia-Family-Quiz-Ten-Points](https://user-images.githubusercontent.com/114010857/224536961-ddc9b8df-5552-4a7f-b537-31d54446bbe5.png)
+
 
 ## Technologies Used
 
