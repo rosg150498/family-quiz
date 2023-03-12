@@ -266,6 +266,43 @@ I have set a total of Ten points for users who select and submit a correct answe
 
 ## Testing & Bugs
 
+
+* HTML
+
+<hr>
+
+I tested my site on W3C HTML Markup Validation Service and found the following error however it hasn't affected the functioning of my final product of the family quiz game therefore I feel it wouldn't impact on the performance of the site. I spent most of the process ensuring I included alt text where necessary and add comments where appropriate.
+
+<hr>
+
+![HTML-Error-Validation](https://user-images.githubusercontent.com/114010857/224540176-a7530838-120e-429c-b208-79fa4be2db67.png)
+
+<hr>
+
+* CSS 
+
+<hr>
+
+I tested my CSS in the W3C CSS Validation Service and got an error that hasn't conflicted with the font styling of my content therefore I felt it was more necessary to spend time referencing to the correct elements and providing a valuable experience for the user. I intend to learn upon what I discovered so I can improve upon disappointments within the project. 
+
+<hr>
+
+![CSS-Error-Validation](https://user-images.githubusercontent.com/114010857/224540229-e60814ac-2cda-408d-bd0c-28abc9ac4673.png)
+
+<hr>
+
+* Javascript
+
+<hr>
+
+Reflection on the errors and disappointments I encountered I removed the unused variables that were not used properly. I will certainly learn upon this project and improve my ways of creating variables, functions and referring to elements in HTML. The following error is inaccurate as I believe I have used these on occasions to validate name, refer to quiz score and return back to main menu.
+
+<hr>
+
+![JS-Hint-Validation](https://user-images.githubusercontent.com/114010857/224540279-abfa4cd6-f547-4217-a7a7-c23903124524.png)
+
+<hr>
+
 ## Deployment 
 
 ### References / Sources of Inspiration
