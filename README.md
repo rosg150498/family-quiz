@@ -152,6 +152,12 @@ I have included wireframes of the sections that I intend to include in the famil
 
 ### Languages
 
+1) HTML
+
+2) CSS
+
+3) Javascript
+
 ### Resources
 
 ### Frameworks & Libraries
