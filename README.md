@@ -140,6 +140,9 @@ I have included wireframes of the sections that I intend to include in the famil
 
 ### Logo
 
+![Logo-quiz-screenshot](https://user-images.githubusercontent.com/114010857/224527438-2272967b-93c8-4569-9207-929f4ab33577.png)
+
+
 ### Media Queries / Responsive Design
 
 ## Project Features
