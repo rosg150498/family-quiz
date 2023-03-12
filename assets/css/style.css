@@ -207,7 +207,481 @@ h2{
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    margin: 8.8rem 0.5rem 0 34rem;
+    margin-top: 12rem;
+    margin-left: 34rem;
     cursor: pointer;
     border-radius: 2rem;
+}
+
+
+
+
+@import url('https://font.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0F4C81;
+}
+
+
+/* Quiz Landing Heading */
+
+#family-landing-icon{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 9.5rem;
+    margin-top: -4rem;
+    box-shadow: 0 6px 20px #ffffff; 
+}
+
+#quiz-landing{
+    font-family: 'Lato', sans-serif;
+    font-size: 60px;
+    color: #FFFFFF;
+    margin-left: 22.8rem;
+    margin-top: 8rem;
+    text-shadow: 0.4rem 0.4rem #000;
+}
+
+#enter-name{
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    font-size: 28px;
+    display: inline-block;
+    margin-left: 34rem;
+    margin-top: 15rem;
+}
+
+#name{
+   height: 1.6rem;
+   width: 14.2rem;
+   margin-left: 0.6rem;
+}
+
+#submit-name{
+   background-color: #E6E6E6;
+   border-color: #FFFFFF;
+   color: #0F4C81;
+   padding: 1.2rem 1.2rem;
+   text-align: center;
+   display: inline-block;
+   position: absolute;
+   font-size: 16px;
+   margin-top: 22rem;
+   margin-left: -17rem;
+   cursor: pointer;
+   border-radius: 2rem;
+   width: 100px;
+}
+
+#family-name {
+    font-family: 'Open Sans';
+    background-color: #E6E6E6;
+    color: #248BE5;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 2.5rem 2.5rem 2.5rem 12rem;
+  }
+
+.error-message{
+    color: #AD0401;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#quiz-play-game{
+    background-color: #E6E6E6;
+    border-color: #FFFFFF;
+    color: #0F4C81;
+    padding: 1.2rem 1.2rem;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    font-size: 16px;
+    margin-top: 18rem;
+    margin-left: 45rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+/* Quiz Game Section */
+
+#quiz-container{
+    color: #FFFFFF;
+}
+
+#family-quiz{
+    margin-top: 40rem;
+    margin-bottom: 20rem;
+}
+
+.quiz-game-icon{
+    height: 100px;
+    width: 100px;
+    margin-left: 12rem;
+    position: absolute;
+    margin-top: 0.1rem;
+    border-radius: 15%;
+    box-shadow: 0 6px 20px #FFFFFF;
+}
+
+.quiz-game-icon:hover{
+    box-shadow: 0 10px 20px #FFFF00;
+}
+
+.trivia-family-quiz{
+    font-family: 'Lato', sans-serif;
+    font-size: 54px;
+    margin-left: 22rem;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    line-height: 7rem;
+    text-shadow: 0.4rem 0.4rem #000;
+}
+
+.family-name{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    background-color: #E6E6E6;
+    color: #0B600B;
+    margin-top: 5rem;
+    margin-left: 0.5rem;
+    padding: 2rem 2rem;
+}
+
+#question{
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    margin-top: 18px;
+}
+
+#quiz-instruction{
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-left: 34.8rem;
+    margin-top: 8rem;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-left: 34.8rem;
+    margin-top: 2rem;
+}
+
+h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 650px;
+    color: #FFFFFF;
+}
+
+#question{
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-top: 4rem;
+    margin-left: 12rem;
+}
+
+.question-hr{
+    width: 85%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 12rem;
+    margin-right: 0;
+}
+
+#submit-answer{
+    background-color: #E6E6E6;
+    border-color: #FFFFFF;
+    color: #0F4C81;
+    padding: 1.2rem 1.2rem;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    font-size: 16px;
+    margin-top: 2.5rem;
+    margin-left: 34rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+#quiz-main-menu{
+    background-color: #E6E6E6;
+    border-color: #FFFFFF;
+    color: #0F4C81;
+    padding: 1.2rem 1.2rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8.8rem 0.5rem 0 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+
+@media screen and (max-width: 320px) {
+
+    #family-landing-icon {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      margin-top: 1rem;
+      margin-left: 8rem;
+    }
+  
+    #quiz-landing {
+      position: absolute;
+      font-size: 65px;
+      margin: 4rem 2rem 8rem 18rem;
+      width: 100%;
+    }
+  
+    #enter-name {
+      font-size: 36px;
+      margin-top: 4rem;
+      margin-left: 10rem;
+    }
+
+    #name {
+        height: 1.6rem;
+        width: auto;
+        margin-left: 0.6rem;
+      }
+    
+      #submit-name {
+        margin-top: 26rem;
+        margin-left: -20rem;
+        width: 120px;
+      }
+    
+      #family-name {
+        font-size: 30px;
+        margin-top: 25rem;
+        margin-left: -10.5rem;
+        padding: 3rem 3rem 3rem 15rem;
+        width: 100%;
+      }
+    
+      .error-message {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+    
+      #quiz-play-game {
+        position: absolute;
+        margin-top: 80rem;
+        margin-left: 50rem;
+      }
+
+      #family-quiz {
+        position: absolute;
+        margin-top: 40rem;
+        margin-bottom: 5rem;
+    }
+
+    .quiz-game-icon {
+        margin-left: 5rem;
+        margin-top: 15rem;
+    }
+
+    .trivia-family-quiz {
+        font-size: 40px;
+        margin-top: 14rem;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+        line-height: 4rem;
+        width: 100%;
+    }
+
+    .family-name {
+        font-size: 24px;
+        margin-top: 3rem;
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    #quiz-instruction {
+        font-size: 30px;
+        margin-left: 5rem;
+        margin-top: 4rem;
+        width: 100%;
+    }
+
+    p {
+        font-size: 16px;
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
+
+    #question {
+        font-size: 30px;
+        margin-top: 5rem;
+        margin-left: 5rem;
+        width: 100%;
+    }
+
+    .question-hr {
+        width: 60%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 5rem;
+    }
+
+    .quiz-answers{
+        width: 100%;
+        margin-left: 2.5rem;
+        font-size: 30px;
+    }
+
+    #submit-answer {
+        margin-top: 1rem;
+        margin-left: 5rem;
+    }
+
+    #quiz-main-menu {
+        margin: 4rem 0.5rem 0 2rem;
+    }
+
+
+@media screen and (max-width: 470px) {
+
+    #family-landing-icon {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        margin-top: 1rem;
+        margin-left: 22rem;
+      }
+    
+      #quiz-landing {
+        position: absolute;
+        font-size: 65px;
+        margin: 16rem 2rem 8rem 12.3rem;
+        width: 100%;
+        text-align: center;
+      }
+    
+      #enter-name {
+        font-size: 36px;
+        margin-top: 41rem;
+        margin-left: 24rem;
+      }
+  
+      #name {
+          height: 1.6rem;
+          width: auto;
+          margin-top: 3rem;
+          margin-left: 21.6rem;
+        }
+      
+        #submit-name {
+          margin-top: 4rem;
+          margin-left: 23rem;
+          width: 120px;
+        }
+      
+        #family-name {
+          font-size: 30px;
+          margin-top: 6rem;
+          margin-left: 0.5rem;
+          padding: 3rem 3rem 3rem 15rem;
+          width: 100%;
+        }
+      
+        .error-message {
+          font-size: 22px;
+          margin-bottom: 12px;
+        }
+      
+        #quiz-play-game {
+          position: absolute;
+          margin-top: 80rem;
+          margin-left: 50rem;
+        }
+  
+        #family-quiz {
+          position: absolute;
+          margin-top: 20rem;
+          margin-bottom: 5rem;
+      }
+  
+      .quiz-game-icon {
+          margin-left: 5rem;
+          margin-top: -2rem;
+      }
+  
+      .trivia-family-quiz {
+          font-size: 40px;
+          margin-top: -2rem;
+          margin-left: 16rem;
+          margin-bottom: 3rem;
+          line-height: 4rem;
+          width: 100%;
+      }
+  
+      .family-name {
+          font-size: 24px;
+          margin-top: 3rem;
+          margin-left: 0;
+          padding: 1rem;
+      }
+  
+      #quiz-instruction {
+          font-size: 30px;
+          margin-left: 14rem;
+          margin-top: 4rem;
+          width: 100%;
+      }
+  
+      p {
+          font-size: 16px;
+          margin-left: 2rem;
+          margin-top: 1rem;
+      }
+  
+      #question {
+          font-size: 32px;
+          margin-top: 5rem;
+          margin-left: 11rem;
+          width: 100%;
+      }
+  
+      .question-hr {
+          width: 60%;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          margin-left: 5rem;
+      }
+  
+      .quiz-answers{
+          width: 100%;
+          margin-left: 13.6rem;
+          font-size: 28px;
+      }
+  
+      #submit-answer {
+          margin-top: 2rem;
+          margin-left: 13rem;
+      }
+  
+      #quiz-main-menu {
+          margin-left: 13rem;
+      }
+  
+     
+  
+    }
+
 }
